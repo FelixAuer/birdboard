@@ -1,0 +1,1 @@
+{{ $activity->user->displayName() }} incompleted "{{ $activity->subject->body }}"

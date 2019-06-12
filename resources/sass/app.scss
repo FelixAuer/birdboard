@@ -1,14 +1,18 @@
+@tailwind preflight;
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'themes/light';
+@import 'themes/dark';
 
-// Variables
-@import 'variables';
+@import 'components/button';
+@import 'components/card';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+body,
+button {
+    @apply .text-default;
 }
+
+.section {
+    @apply .px-8;
+}
+
+@tailwind utilities;

@@ -1,0 +1,1 @@
+{{ $activity->user->displayName() }} created "{{ $activity->subject->body }}"

@@ -1,0 +1,1 @@
+{{ $activity->user->displayName() }} completed "{{ $activity->subject->body }}"
