@@ -38,11 +38,11 @@
                             class="border border-muted-light p-2 text-xs block w-full rounded mb-2" 
                             placeholder="Task 1" 
                             v-for="task in form.tasks"
-                            v-model="task.value"
+                            v-model="task.body"
                         >
                     </div>
 
-                    <button class="inline-flex items-center" @click="addTask">
+                    <button type="button" class="inline-flex items-center" @click="addTask">
                         <svg class="mr-2" viewbox="0 0 18 18" height="18" width="18">
                             <g fill="#000" fill-rule="evenodd" opacity=".307">
                                 <path fill="#000" d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,
@@ -63,8 +63,8 @@
             </div>
         
             <footer class="flex justify-end">
-                <button class="button is-outlined mr-4" @click="$modal.hide('new-project')">Cancel</button>
-                <button class="button">Create Project</button>
+                <button type="button" class="button is-outlined mr-4" @click="$modal.hide('new-project')">Cancel</button>
+                <button type="submit" class="button">Create Project</button>
             </footer>
         </form>
     </modal>
@@ -77,7 +77,7 @@ export default {
 			form: {
 				title: "",
 				description: "",
-				tasks: [{ value: "" }]
+				tasks: [{ body: "" }]
 			},
 			errors: {}
 		};
@@ -85,7 +85,7 @@ export default {
 
 	methods: {
 		addTask() {
-			this.form.tasks.push({ value: "" });
+			this.form.tasks.push({ body: "" });
 		},
 		submit() {
 			axios
